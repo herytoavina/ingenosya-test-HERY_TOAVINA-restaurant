@@ -23,6 +23,10 @@ export class RepasService {
   getAll(): Observable<Repas[]> {
     return this.httpClient.get<Repas[]>(this.apiURL + 'repas');
   }
+
+  getIngredients(): Observable<any>{
+    return this.httpClient.get<any>(this.apiURL + 'ingredients');
+  }
   
   repas_crees(): Observable<any> {
     return this.httpClient.get<any>(this.apiURL + 'repas/crees');

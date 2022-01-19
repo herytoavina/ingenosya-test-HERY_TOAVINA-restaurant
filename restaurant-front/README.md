@@ -24,4 +24,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+1-Vous pouvez ajouter un repas et selectionner un ingredient
+    =>`http://localhost:4200/repas/index`
+2-Voir la liste des repas saisie 
+    => `http://localhost:4200/repas/list`
+3-Pour voir la liste des repas creer 
+    => `http://localhost:4200/repas/crees`
+
+
+
+
+

@@ -18,6 +18,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { RepasIngredientsComponent } from './repas/repas-ingredients/repas-ingredients.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatSelectModule,
     MatTableModule,
     MatPaginatorModule,
-    MatGridListModule
+    MatGridListModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

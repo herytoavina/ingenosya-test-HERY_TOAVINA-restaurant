@@ -2,20 +2,20 @@ create database restaurant;
 
 use restaurant;
 
-php artisan make:model Repas -m
-php artisan make:model Ingredients -m
-php artisan make:model Repas_Ingredients -m
-php artisan make:model Repas_Crees -m
-php artisan make:model Ventes -m
+-- php artisan make:model Repas -m
+-- php artisan make:model Ingredients -m
+-- php artisan make:model Repas_Ingredients -m
+-- php artisan make:model Repas_Crees -m
+-- php artisan make:model Ventes -m
 
-php artisan migrate 
+-- php artisan migrate 
 
-php artisan make:controller RepasController -r
-php artisan make:controller RepasIngredientsController -r
-php artisan make:controller VentesController -r
+-- php artisan make:controller RepasController -r
+-- php artisan make:controller RepasIngredientsController -r
+-- php artisan make:controller VentesController -r
 
-php artisan make:resource RepasResource
-php artisan make:resource RepasIngredientsResource
+-- php artisan make:resource RepasResource
+-- php artisan make:resource RepasIngredientsResource
 
 
 CREATE TABLE repas(

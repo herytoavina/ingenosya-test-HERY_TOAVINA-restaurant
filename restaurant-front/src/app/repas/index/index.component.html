@@ -22,10 +22,8 @@
                 <div [formGroupName]="i">
                     <mat-form-field appearance="fill">
                         <mat-label>Choisissez l'ingredient</mat-label>
-                        <mat-select formControlName="nom_ingredient" placeholder="Nom de l'ingredient">
-                            <mat-option value="option1">Option 1</mat-option>
-                            <mat-option value="option2">Option 2</mat-option>
-                            <mat-option value="option3">Option 3</mat-option>
+                        <mat-select formControlName="nom_ingredient">
+                            <mat-option *ngFor="let ingredient of ingredientss" value="{{ingredient.id}}">{{ingredient.nom}}</mat-option>
                         </mat-select>
                     </mat-form-field> 
                     <mat-form-field appearance="fill">

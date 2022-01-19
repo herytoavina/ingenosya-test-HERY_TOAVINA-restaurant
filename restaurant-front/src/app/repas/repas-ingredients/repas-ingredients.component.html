@@ -1,1 +1,14 @@
-<p>repas-ingredients works!</p>
+<mat-card class="example-card">
+    <mat-card-title>Liste des ingredients</mat-card-title>
+    <mat-card-content>
+        <mat-list role="list" *ngFor="let ingredient of repasIngredients">
+            <mat-list-item role="listitem">{{ingredient.nom}}: {{ingredient.quantite}} {{ ingredient.unite}}</mat-list-item>
+        </mat-list>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-button>Créer</button>
+    </mat-card-actions>
+    <mat-card-footer>
+    </mat-card-footer>
+  </mat-card>

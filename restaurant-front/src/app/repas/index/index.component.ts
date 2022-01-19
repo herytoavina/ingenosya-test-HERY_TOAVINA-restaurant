@@ -11,6 +11,7 @@ import { RepasService } from '../repas.service';
 })
 export class IndexComponent implements OnInit {
   repass: Repas[] = [];
+  ingredientss: any = [];
   ingredientsArray = new FormArray([]);
   form = this.fb.group({
     nom: '',
@@ -20,6 +21,10 @@ export class IndexComponent implements OnInit {
   constructor(private repasService: RepasService, private fb:FormBuilder) { }
 
   ngOnInit(): void {
+    this.repasService.getIngredients().subscribe( (data: any) =>{
+      this.ingredientss = data.data;
+      console.log('INGREDIENTSS',this.ingredientss);
+    })
   }
 
   get ingredients() {
@@ -34,10 +39,16 @@ export class IndexComponent implements OnInit {
   
     this.ingredients.push(lessonForm);
   }
+
   
+
   save() {
-    console.log('REPAS', this.form.controls["nom"].value);
-    console.log('INGREDIENTS', this.ingredients.value);
+    const repas = [ this.form.controls["nom"].value, this.ingredients.value];
+    this.repasService.addRepas(repas).subscribe((response)=>{
+      console.log(response);
+    }
+    )
+    console.log('INGREDIENTS', repas);
   }
 
 }

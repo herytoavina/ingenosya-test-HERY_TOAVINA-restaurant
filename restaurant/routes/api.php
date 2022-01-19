@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IngredientsController;
 use App\Http\Controllers\RepasController;
 use App\Http\Controllers\RepasIngredientsController;use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,4 @@ Route::post('/repas/create', [RepasController::class, 'store']);
 Route::post('/repas/add', [RepasIngredientsController::class, 'store']);
 Route::get('/repas/crees', [RepasController::class, 'repas_crees']);
 Route::get('/repas/ingredient/{idRepas}', [RepasIngredientsController::class, 'index']);
+Route::get('/ingredients', [IngredientsController::class, 'index']);

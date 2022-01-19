@@ -8,10 +8,11 @@ import { MatPaginator } from '@angular/material/paginator';
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
+  
 })
 export class ListComponent implements OnInit {
 
-  displayedColumns: string[] = ['nom', 'action'];
+  displayedColumns: string[] = ['id', 'nom', 'action'];
   // dataSource: MatTableDataSource<Repas>;
   repass: Repas | undefined;
   data: Repas[];
