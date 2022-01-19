@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+</head>
+<body>
+
+    <mat-card>
+        <mat-card-title>Ajouter un repas</mat-card-title>
+        <mat-card-subtitle>End</mat-card-subtitle>
+        <div class="add-lessons-form" [formGroup]="form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nom du repas</mat-label>
+                <input matInput placeholder="Ex. Pizza" type="text" formControlName="nom">
+              </mat-form-field>
+              <h4>Ingredients</h4>
+            <ng-container formArrayName="ingredients">
+            <ng-container *ngFor="let ingredients of ingredients.controls; let i = index">
+                <div [formGroupName]="i">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Choisissez l'ingredient</mat-label>
+                        <mat-select formControlName="nom_ingredient" placeholder="Nom de l'ingredient">
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field> 
+                    <mat-form-field appearance="fill">
+                        <input matInput formControlName="quantite" placeholder="Quantité">
+                    </mat-form-field> 
+                    </div>
+                </ng-container>
+            </ng-container>
+            
+        </div>
+        <mat-card-actions align="end">
+            <button mat-raised-button color="accent" (click)="addIngredients()">Ajouter un ingredient</button>
+            <button mat-raised-button color="primary" (click)="save()">Valider</button>
+      </mat-card-actions>
+    </mat-card>
+</body>
+</html>
